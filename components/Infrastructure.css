@@ -1,0 +1,309 @@
+.infrastructure-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+  
+  .infrastructure-hero {
+    position: relative;
+    height: 70vh;
+    background-image: url('https://images.unsplash.com/photo-1450170391895-b790726e2318?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .infrastructure-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+  
+  .infrastructure-hero-title {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 700;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+  }
+  
+  .infrastructure-section {
+    padding: 10px 5% 50px 5%;
+    background-color: #fff;
+  }
+  
+  .section-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+  }
+  
+  .section-header h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  .section-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-top: 30px;
+  }
+  
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    /* border-radius: 15px; */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .image-container {
+    position: relative;
+    padding-top: 75%;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover .image-container img {
+    transform: scale(1.1);
+  }
+  
+  .image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover .image-overlay {
+    transform: translateY(0);
+  }
+  
+  .image-overlay h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  .facility-features,
+  .stock-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 80px;
+    padding: 0 20px;
+  }
+  
+  .feature-card {
+    background: linear-gradient(145deg, #ffffff, #e2e1e1);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(196, 163, 90, 0.1);
+  }
+  
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #1ba6ad;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .feature-card h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .feature-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #1ba6ad;
+    transition: width 0.3s ease;
+  }
+  
+  .feature-card:hover h3::after {
+    width: 80px;
+  }
+  
+  .feature-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .feature-card ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card ul li:hover {
+    transform: translateX(5px);
+    color: #2c3e50;
+  }
+  
+  .feature-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #1ba6ad;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card ul li:hover::before {
+    transform: translateX(5px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .infrastructure-hero-title {
+      font-size: 3.5rem;
+    }
+    
+    .image-gallery {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .infrastructure-hero-title {
+      font-size: 3rem;
+    }
+  
+    .section-header h2 {
+      font-size: 2.5rem;
+    }
+  
+    .facility-features,
+    .stock-features {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    
+    .image-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .infrastructure-hero {
+      height: 50vh;
+    }
+  
+    .infrastructure-hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .infrastructure-section {
+      padding: 60px 5%;
+    }
+  
+    .section-header h2 {
+      font-size: 2rem;
+    }
+  
+    .section-description {
+      font-size: 1.1rem;
+    }
+  
+    .facility-features,
+    .stock-features {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    
+    .feature-card {
+      padding: 25px;
+    }
+    
+    .feature-card h3 {
+      font-size: 1.6rem;
+    }
+    
+    .feature-card ul li {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .infrastructure-hero-title {
+      font-size: 2rem;
+    }
+  
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+  
+    .image-gallery {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .infrastructure-section {
+      padding: 40px 5%;
+    }
+  }

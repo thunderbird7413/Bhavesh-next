@@ -1,0 +1,192 @@
+.about-page {
+  padding: 0; /* Remove padding from the main container */
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust hero height */
+  background-image: url('https://plus.unsplash.com/premium_photo-1722686469498-5f1653ac6fa5?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* New hero image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px; /* Space below hero */
+  color: #fff;
+  /* text-align: center; */
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay */
+}
+
+.about-hero-title {
+  position: relative;
+  z-index: 1;
+  font-size: 3.5em;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  padding: 0 20px;
+}
+
+.about-section {
+  margin: 40px auto; /* Center sections and add vertical margin */
+  padding: 0; /* Remove padding here, add to content */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Contains floated elements */
+  max-width: 1200px; /* Max width for sections */
+}
+
+.about-content {
+  padding: 40px;
+  flex: 1;
+}
+
+.about-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container */
+  transition: transform 0.5s ease; /* Add transition for hover effect */
+}
+
+.about-section:hover .about-image {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.reverse-layout .about-content {
+  order: 2; /* Reverse order of content and image */
+}
+
+.reverse-layout .about-image-container {
+  order: 1;
+}
+
+.about-section h2 {
+  color: #1ba6ad; /* Matches the footer theme */
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2em;
+  border-bottom: 2px solid #1ba6ad; /* Add an underline */
+  padding-bottom: 10px;
+  display: inline-block; /* Shrink border to content */
+}
+
+.about-section p {
+  line-height: 1.7;
+  font-size: 1.1em;
+  color: #555;
+  text-align: left;
+}
+
+
+@media (max-width: 992px) {
+  .about-hero-title {
+    font-size: 2.5em;
+  }
+  
+  .about-section {
+    flex-direction: column; /* Stack image and text on smaller screens */
+  }
+  
+  .reverse-layout .about-content,
+  .reverse-layout .about-image-container {
+    order: initial; /* Reset order */
+  }
+  
+  .about-content {
+    padding: 30px;
+  }
+  
+  .about-image-container {
+    width: 100%;
+    height: 300px; /* Fixed height for images on smaller screens */
+  }
+  
+  .about-section h2 {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 50vh;
+  }
+  
+  .about-hero-title {
+    font-size: 2em;
+  }
+  
+  .about-page {
+    padding: 0 10px;
+  }
+  
+  .about-section {
+    margin: 30px auto;
+  }
+  
+  .about-content {
+    padding: 20px;
+  }
+  
+  .about-image-container {
+     height: 250px; /* Further reduce image height */
+  }
+  
+  .about-section h2 {
+    font-size: 1.5em;
+  }
+  
+  .about-section p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+   .about-hero {
+    height: 40vh;
+  }
+  
+  .about-hero-title {
+    font-size: 1.5em;
+  }
+  
+  .about-section {
+    margin: 20px auto;
+  }
+  
+   .about-content {
+    padding: 15px;
+  }
+   .about-image-container {
+     height: 200px; /* Further reduce image height */
+  }
+  
+  .about-section h2 {
+    font-size: 1.3em;
+  }
+  
+  .about-section p {
+    font-size: 0.9em;
+  }
+} 
