@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="footer-container">
         {/* Company Info Section */}
         <div className="footer-section">
-          <h3>ShopEase</h3>
+          <h3>MG OVERSEAS</h3>
           <p className="company-description">
-            Your one-stop destination for all your shopping needs. We provide quality products with excellent customer service.
+          We are dedicated to providing top-quality granite and natural stone products to clients worldwide. With a commitment to excellence and customer satisfaction, we offer a wide range of premium stones for all your construction and design needs. Connect with us for reliable service and superior materials.
           </p>
           <div className="social-links">
             <a href="https://pin.it/65bo2d3NW" target="_blank" rel="noopener noreferrer">
