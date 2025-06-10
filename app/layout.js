@@ -5,49 +5,44 @@ import WhatsAppButton from '../components/WhatsAppButton'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Granite Products | Premium Stone Collection | MG Overseas',
-  description:
-    'Discover top-quality granite products at MG Overseas. From Premium Granite to Exotic and North Indian varieties, explore natural stones perfect for flooring, kitchen tops, and architecture.',
-  keywords:
-    'granite, premium granite, black granite, exotic granite, north indian granite, granite slabs, natural stone, stone supplier India, MG Overseas',
+  title: 'MG Overseas | Premium Natural Stone Supplier',
+  description: 'Welcome to MG Overseas – your trusted supplier of premium granite and natural stone across India and abroad.',
+  keywords: 'granite supplier, MG Overseas, natural stone India, home decor stone, granite slabs',
   openGraph: {
-    title: 'Granite Products | MG Overseas',
-    description:
-      'Browse our curated collection of premium granite: Black, Exotic, and North Indian Granite. Trusted by architects and builders across India and abroad.',
-    url: 'https://www.mgoverseasgroup.com/products',
-    siteName: 'MG Overseas',
-    locale: 'en_IN',
-    type: 'website',
+    title: 'MG Overseas | Premium Natural Stone Supplier',
+    description: 'Top-quality granite for architecture, interiors, and exteriors.',
+    url: 'https://www.mgoverseasgroup.com/',
     images: [
       {
-        url: 'https://www.mgoverseasgroup.com/images/products-og.jpg',
+        url: 'https://www.mgoverseasgroup.com/images/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Granite Slabs and Natural Stone Collection by MG Overseas',
+        alt: 'MG Overseas Granite Banner',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Granite Products | MG Overseas',
-    description:
-      'Explore the finest granite slabs and natural stones at MG Overseas — ideal for homes, hotels, and commercial spaces.',
-    images: ['https://www.mgoverseasgroup.com/images/products-og.jpg'],
-    site: '@mgoverseas',
+    title: 'MG Overseas | Premium Natural Stone Supplier',
+    description: 'Explore the world of premium granite with MG Overseas.',
+    images: ['https://www.mgoverseasgroup.com/images/og-home.jpg'],
   },
   metadataBase: new URL('https://www.mgoverseasgroup.com'),
 };
 
 
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="canonical" href="https://www.mgoverseasgroup.com/" />
+      </head>
       <body className={inter.className}>
-        <div id="root">
-          {children}
-        </div>
+        <div id="root">{children}</div>
         <WhatsAppButton />
       </body>
     </html>
-  )
-} 
+  );
+}
