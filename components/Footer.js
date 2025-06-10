@@ -1,8 +1,12 @@
-import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhone, FaEnvelope, FaMapMarkerAlt, FaPinterest } from 'react-icons/fa';
+"use client";
+import React, { useState } from 'react';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhone, FaEnvelope, FaMapMarkerAlt, FaPinterest, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
+  const [isPhoneOpen, setIsPhoneOpen] = useState(false);
+  const [isEmailOpen, setIsEmailOpen] = useState(false);
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -44,7 +48,7 @@ const Footer = () => {
           <h3>Address</h3>
           <div className="footer-address">
             <FaMapMarkerAlt style={{ marginRight: '8px' }} />
-            <span>MG OVERSEAS <br></br>( MARUTI GRANI MARMO) , <br></br>JALORE-BHINMAL ROAD, BHAGLI SINDHLAN, JALOR, RAJASTHAN, INDIA (343025)
+            <span>MG OVERSEAS <br></br>( MARUTI GRANI MARMO) <br></br>JALORE-BHINMAL ROAD, BHAGLI SINDHLAN, JALOR, RAJASTHAN, INDIA (343025)
             </span>
           </div>
         </div>
@@ -52,26 +56,49 @@ const Footer = () => {
         {/* Contact Info Section */}
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <ul className="contact-info-1">
-            <div style={{display: "flex", gap: "10px"}}>
-            <FaPhone/>
-            <li>
-              <span>+916376844361,
-              </span>
-              <span>
-                 +918460826817
-              </span>
-            </li>
+          <div className="contact-accordion">
+            <div className="accordion-item">
+              <button 
+                className="accordion-header" 
+                onClick={() => setIsPhoneOpen(!isPhoneOpen)}
+              >
+                <div className="accordion-title">
+                  <FaPhone />
+                  <span>Phone Numbers</span>
+                </div>
+                {isPhoneOpen ? <FaChevronUp /> : <FaChevronDown />}
+              </button>
+              {isPhoneOpen && (
+                <div className="accordion-content">
+                  <ul className="phone-numbers">
+                    <li>+916376844361</li>
+                    <li>+918460826817</li>
+                  </ul>
+                </div>
+              )}
             </div>
-            
-            <div style={{display: "flex", gap: "10px"}}>
-              <FaEnvelope style={{fontSize: "2rem"}}/>
-            <li>
-              <span>info@mgoverseasgroup.com, </span>
-              <span>mgoverseas128@gmail.com </span>
-            </li>
+
+            <div className="accordion-item">
+              <button 
+                className="accordion-header" 
+                onClick={() => setIsEmailOpen(!isEmailOpen)}
+              >
+                <div className="accordion-title">
+                  <FaEnvelope />
+                  <span>Email Addresses</span>
+                </div>
+                {isEmailOpen ? <FaChevronUp /> : <FaChevronDown />}
+              </button>
+              {isEmailOpen && (
+                <div className="accordion-content">
+                  <ul className="email-addresses">
+                    <li>info@mgoverseasgroup.com</li>
+                    <li>mgoverseas128@gmail.com</li>
+                  </ul>
+                </div>
+              )}
             </div>
-          </ul>
+          </div>
         </div>
 
        

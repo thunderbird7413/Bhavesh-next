@@ -91,7 +91,7 @@ const About = () => {
         <div className="about-content">
           <h2>Vision and Mission</h2>
           <p>
-            <h3><b>Our Vission</b></h3>
+            <h3><b>Our Vision</b></h3>
             To be a global leader in the natural stone industry, known for our commitment to quality, innovation, and ethical business practices—delivering granite that enhances spaces and builds lasting relationships.
 
             <h3><b>Our Mission</b></h3>

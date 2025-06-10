@@ -57,7 +57,7 @@ const ProductSection = () => {
               />
               <div className="overlay">
                 <Link href={category.link} className="view-more">
-                  View Collection
+                  View Collection 
                 </Link>
               </div>
             </div>
